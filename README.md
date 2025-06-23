@@ -39,3 +39,25 @@ Writes and runs tests to ensure the application functions as expected. Detects b
 Designs user-friendly interfaces and ensures a smooth user experience. Collaborates with frontend and backend developers to bring visual and functional consistency to the app.
 
 Add Team Roles section to README
+
+## Technology Stack
+
+### Django
+A high-level Python web framework used to build scalable and secure web applications quickly. It provides built-in support for creating RESTful APIs using Django REST Framework (DRF).
+
+### PostgreSQL
+A powerful open-source relational database used to store and manage structured data such as users, listings, and bookings in the Airbnb clone.
+
+### GraphQL *(if used in your project)*
+A query language for APIs that enables clients to request exactly the data they need. It improves performance and flexibility in client-server communication.
+
+### Docker
+Used for containerizing the application to ensure consistency across development, testing, and production environments. It simplifies deployment and scalability.
+
+### Git & GitHub
+Version control tools that help track changes in the codebase, manage collaboration across the team, and host the project repository online.
+
+### Render or Heroku *(Deployment platform; choose based on your actual project)*
+Used to deploy the web application online, making it accessible to users for testing and demonstration.
+
+Add Technology Stack section to README
