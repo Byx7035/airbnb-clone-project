@@ -168,3 +168,15 @@ Payments will be processed using a secure third-party provider (e.g., Stripe), w
 
 Add API Security section to README
 
+
+## CI/CD Pipeline
+
+Continuous Integration (CI) and Continuous Deployment (CD) pipelines help automate the process of building, testing, and deploying code. They ensure that every change made to the project is automatically tested and, if successful, deployed to a live or staging environment. This helps catch bugs early, speed up development, and maintain code quality throughout the project lifecycle.
+
+For this project, the following tools can be used:
+- **GitHub Actions**: Automates tasks such as running tests, linting, and deploying code when changes are pushed to the repository.
+- **Docker**: Packages the application into containers to ensure consistency across development and production environments.
+- **Render or Heroku**: Used to automatically deploy the application after successful CI checks, making the latest version live with minimal manual effort.
+
+Add CI/CD Pipeline section to README
+
