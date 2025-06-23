@@ -61,3 +61,27 @@ Version control tools that help track changes in the codebase, manage collaborat
 Used to deploy the web application online, making it accessible to users for testing and demonstration.
 
 Add Technology Stack section to README
+
+
+## Feature Breakdown
+
+### User Management
+Allows users to sign up, log in, and manage their profiles. It supports both guests (who book properties) and hosts (who list properties), using role-based access control.
+
+### Property Management
+Enables hosts to create, update, and delete property listings. Each property includes details such as title, location, description, price per night, and availability status.
+
+### Booking System
+Guests can search for properties, view availability, and make bookings for selected dates. The system handles conflict checks to prevent double-bookings and manages booking statuses.
+
+### Review and Rating System
+After a completed stay, guests can leave reviews and ratings for properties. This helps build trust and transparency between guests and hosts.
+
+### Payment Integration
+Handles secure payment processing for bookings. Payments are recorded with details such as amount, date, and status, ensuring a clear transaction history for users and admins.
+
+### Admin Dashboard *(Optional/Future Enhancement)*
+Provides administrative users with tools to monitor user activity, view system analytics, and manage content. It helps maintain platform quality and enforce community guidelines.
+
+Add Database Design section to README
+
