@@ -63,25 +63,53 @@ Used to deploy the web application online, making it accessible to users for tes
 Add Technology Stack section to README
 
 
-## Feature Breakdown
 
-### User Management
-Allows users to sign up, log in, and manage their profiles. It supports both guests (who book properties) and hosts (who list properties), using role-based access control.
+## Database Design
 
-### Property Management
-Enables hosts to create, update, and delete property listings. Each property includes details such as title, location, description, price per night, and availability status.
+### Entities and Fields
 
-### Booking System
-Guests can search for properties, view availability, and make bookings for selected dates. The system handles conflict checks to prevent double-bookings and manages booking statuses.
+#### 1. Users
+- `id`: Unique identifier for each user
+- `name`: Full name of the user
+- `email`: Email address (used for login)
+- `password_hash`: Encrypted password
+- `role`: Can be "host" or "guest"
 
-### Review and Rating System
-After a completed stay, guests can leave reviews and ratings for properties. This helps build trust and transparency between guests and hosts.
+#### 2. Properties
+- `id`: Unique identifier for each property
+- `title`: Name or description of the listing
+- `location`: City or geographic location
+- `price_per_night`: Cost to rent per night
+- `host_id`: Foreign key linking to the user who owns the property
 
-### Payment Integration
-Handles secure payment processing for bookings. Payments are recorded with details such as amount, date, and status, ensuring a clear transaction history for users and admins.
+#### 3. Bookings
+- `id`: Unique booking identifier
+- `property_id`: Foreign key linking to the booked property
+- `guest_id`: Foreign key linking to the user who made the booking
+- `check_in`: Start date of the stay
+- `check_out`: End date of the stay
 
-### Admin Dashboard *(Optional/Future Enhancement)*
-Provides administrative users with tools to monitor user activity, view system analytics, and manage content. It helps maintain platform quality and enforce community guidelines.
+#### 4. Reviews
+- `id`: Unique review identifier
+- `property_id`: Foreign key linking to the reviewed property
+- `guest_id`: Foreign key linking to the reviewer
+- `rating`: Star rating (1–5)
+- `comment`: Textual feedback
+
+#### 5. Payments
+- `id`: Unique payment transaction ID
+- `booking_id`: Foreign key linking to the booking
+- `amount`: Total amount paid
+- `payment_date`: Timestamp of payment
+- `status`: Payment status (e.g., successful, failed)
+
+### Entity Relationships
+
+- A **User** can be a **host** (owning multiple properties) or a **guest** (making bookings).
+- A **Property** is owned by one user (host) and can have multiple bookings and reviews.
+- A **Booking** is linked to one guest and one property.
+- A **Review** is written by a guest and linked to a specific property.
+- A **Payment** is tied to a single booking.
 
 Add Database Design section to README
 
