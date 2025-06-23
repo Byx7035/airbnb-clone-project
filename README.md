@@ -136,3 +136,35 @@ Handles secure payment processing for bookings. Payments are recorded with detai
 Provides administrative users with tools to monitor user activity, view system analytics, and manage content. It helps maintain platform quality and enforce community guidelines.
 
 Add Database Design section to README
+
+## API Security
+
+Securing the backend API is critical to protect user data, prevent unauthorized access, and ensure the integrity of the platform. This project will implement the following key security measures:
+
+### 1. Authentication
+Only registered users will be able to access protected routes. This will be handled using token-based authentication such as JWT (JSON Web Tokens), which securely identifies and validates each user session.
+
+*Why it's important:* Prevents unauthorized access to user accounts and protects personal data.
+
+### 2. Authorization
+Role-based access control (RBAC) will be used to define what actions different users can perform. For example, only hosts can create property listings, and only guests can make bookings.
+
+*Why it's important:* Ensures that users can only perform actions they are permitted to, protecting platform integrity.
+
+### 3. Rate Limiting
+Requests to the API will be rate-limited to prevent abuse, such as brute-force attacks or spamming endpoints.
+
+*Why it's important:* Helps mitigate denial-of-service (DoS) attacks and protects server resources.
+
+### 4. Input Validation & Sanitization
+All incoming data will be validated and sanitized to prevent injection attacks such as SQL injection or XSS (Cross-Site Scripting).
+
+*Why it's important:* Prevents malicious users from compromising the system or extracting sensitive information.
+
+### 5. Secure Payment Handling
+Payments will be processed using a secure third-party provider (e.g., Stripe), with sensitive data like credit card numbers never stored on the server.
+
+*Why it's important:* Protects financial data and builds trust with users.
+
+Add API Security section to README
+
